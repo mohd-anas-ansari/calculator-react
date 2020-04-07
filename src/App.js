@@ -14,7 +14,7 @@ function App() {
 	return (
 		<div className="App">
       <Home />
-      <Route path="/" component={MainSection} />
+      <Route exact path="/" component={MainSection} />
       <Route path="/add" component={Add} />
       <Route path="/sub" component={Sub} />
       <Route path="/div" component={Div} />
