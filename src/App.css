@@ -1,3 +1,17 @@
 .App {
   text-align: center;
 }
+
+.buttons-container {
+  margin: 0 auto;
+  width: 50vw;
+  display: flex;
+  justify-content: space-around;
+}
+.buttons-container button {
+  font-size: 1rem;
+  background-color: tomato;
+  outline: none;
+  border: 1px solid black;
+  border-radius: 5px;
+}
