@@ -1,18 +1,18 @@
-import React from 'react';
-import './App.css';
+import React from "react";
+import { Route } from "react-router-dom";
+
+import "./App.css";
+import Home from "./components/Home";
+import Add from './components/Add'
 
 function App() {
-  return (
-    <div className="App">
-      <h1>Adder</h1>
-      <div className='buttons-container'>
-      <button>Add</button>
-      <button>Subtract</button>
-      <button>Multiply</button>
-      <button>Divide</button>
-      </div>
-    </div>
-  );
+	return (
+		<div className="App">
+			<Home />
+
+			<Route path="/add" component={Add} />
+		</div>
+	);
 }
 
 export default App;
