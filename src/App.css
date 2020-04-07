@@ -37,3 +37,28 @@ h1 {
 .active-button {
   background-color: aqua;
 }
+
+/* Inputs */
+.inputs {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0 auto;
+}
+
+.input {
+  padding: 0;
+  text-align: center;
+  margin: 0;
+  font-size: 4rem;
+  font-weight: 800;
+  width: 20vh;
+  height: 20vh
+  ;
+}
+
+/* Equals  */
+
+.equals {
+  font-size: 10rem;
+  font-weight: 900;
+}
