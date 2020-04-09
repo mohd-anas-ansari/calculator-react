@@ -36,9 +36,9 @@ class App extends React.Component {
 
 				{/* <Route path="/add" component={Add} values={this.state.values} /> */}
 				<Route path='/add' render={(props) => <Add {...this.state.values} />} />
-				<Route path="/sub" component={Sub} />
-				<Route path="/div" component={Div} />
-				<Route path="/mul" component={Mul} />
+				<Route path='/sub' render={(props) => <Sub {...this.state.values} />} />
+				<Route path='/mul' render={(props) => <Mul {...this.state.values} />} />
+				<Route path='/div' render={(props) => <Div {...this.state.values} />} />
 			</div>
 		);
 	}
