@@ -10,26 +10,32 @@ import Div from "./components/Div";
 import Mul from "./components/Mul";
 
 class App extends React.Component {
-  
 	state = {
 		backgroundColor: "#e67e22",
+		values: {
+			num1: 0,
+			num2: 0,
+		},
 	};
 
 	handleBackground = (color) => {
-    this.setState({
-      backgroundColor: color
-    });
+		this.setState({
+			backgroundColor: color,
+		});
 	};
 
 	render() {
-
 		return (
-			<div className="App" style={{backgroundColor: this.state.backgroundColor}}>
+			<div
+				className="App"
+				style={{ backgroundColor: this.state.backgroundColor }}
+			>
 				<Home handleBackground={this.handleBackground} />
 
-        <Route exact path="/" component={MainSection} />
-        
-				<Route path="/add" component={Add} />
+				<Route exact path="/" component={MainSection} />
+
+				{/* <Route path="/add" component={Add} values={this.state.values} /> */}
+				<Route path='/add' render={(props) => <Add {...this.state.values} />} />
 				<Route path="/sub" component={Sub} />
 				<Route path="/div" component={Div} />
 				<Route path="/mul" component={Mul} />
@@ -39,3 +45,9 @@ class App extends React.Component {
 }
 
 export default App;
+
+
+//from this project, I learned a lot.. Many concepts of react got cleared in mind. The app in itself is stupid though
+//Learned why redux is useful
+//how do we pass data
+//how to handle data.

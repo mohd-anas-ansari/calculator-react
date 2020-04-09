@@ -5,12 +5,13 @@ import Equals from "./Equals";
 
 
 class Add extends React.Component {
-	state = {};
+	
 	render() {
+		console.log(this.props, 'props');
 		return (
 			<>
 				<h1>Welcome to Add Page</h1>
-        <Inputs />
+				<Inputs />
         <Equals />
 			</>
 		);
